@@ -3,499 +3,579 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista VIP de Fornecedores de Maquiagem - Lucre até 300% Revendendo</title>
+    <title>Lista Exclusiva de Fornecedores Maquiagem 2025 - Acesso Limitado</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-        body { font-family: 'Poppins', sans-serif; }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, #ff6b9d 0%, #c44569 50%, #f8b500 100%);
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); }
+        .gradient-text { background: linear-gradient(135deg, #1e40af, #7c3aed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .pulse-animation { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
         }
-        
-        .pulse-glow {
-            animation: pulseGlow 2s infinite;
-        }
-        
-        @keyframes pulseGlow {
-            0% { box-shadow: 0 0 20px rgba(255, 107, 157, 0.5); }
-            50% { box-shadow: 0 0 30px rgba(255, 107, 157, 0.8); }
-            100% { box-shadow: 0 0 20px rgba(255, 107, 157, 0.5); }
-        }
-        
-        .shake {
-            animation: shake 0.5s ease-in-out;
-        }
-        
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-5px); }
-            75% { transform: translateX(5px); }
-        }
-        
-        .countdown {
-            background: linear-gradient(45deg, #ff4757, #ff3838);
-        }
-        
-        .testimonial-card {
-            background: linear-gradient(135deg, #fff 0%, #f8f9ff 100%);
-            border-left: 4px solid #ff6b9d;
-        }
-        
-        .benefit-icon {
-            background: linear-gradient(135deg, #ff6b9d, #f8b500);
-        }
+        .countdown { font-family: 'Courier New', monospace; }
+        .testimonial-card { transition: all 0.3s ease; }
+        .testimonial-card:hover { transform: translateY(-5px); }
+        .scarcity-bar { background: linear-gradient(90deg, #ef4444 0%, #dc2626 100%); }
     </style>
 </head>
-<body class="bg-gray-50">
-    <!-- Header com Urgência -->
-    <div class="countdown text-white text-center py-3">
-        <div class="flex items-center justify-center space-x-4">
-            <span class="text-sm font-semibold">🔥 OFERTA LIMITADA - RESTAM APENAS:</span>
-            <div id="countdown-timer" class="font-bold text-lg"></div>
+<body class="gradient-bg min-h-screen">
+    <!-- Scarcity Bar -->
+    <div class="scarcity-bar text-white text-center py-3 px-4">
+        <div class="max-w-6xl mx-auto flex items-center justify-center space-x-4">
+            <span class="font-semibold">🔥 ÚLTIMAS 47 VAGAS DISPONÍVEIS</span>
+            <span class="countdown font-bold" id="countdown">23:59:42</span>
         </div>
     </div>
 
-    <!-- Hero Section -->
-    <section class="gradient-bg text-white py-16">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <div class="mb-4 sm:mb-8 text-center">
-  <span class="bg-yellow-400 text-gray-900 px-3 py-1 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-bold inline-block max-w-full">
-    ✨ EXCLUSIVO PARA MENTES EMPREENDEDORAS.
-  </span>
-</div>
+    <!-- Header -->
+    <header class="text-center py-12 px-4">
+        <div class="max-w-5xl mx-auto">
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-8 inline-block">
+                <span class="text-blue-800 font-semibold">✅ Mais de 2.847 empreendedores já garantiram acesso</span>
+            </div>
 
+            <!-- Product Images Gallery -->
+            <div class="mb-12">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                    <div class="bg-white p-4 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300">
+                        <div class="w-full h-32 rounded-lg mb-3 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=400&h=300&fit=crop&crop=center" 
+                                 alt="Batons coloridos" 
+                                 class="w-full h-full object-cover"
+                                 onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none';">
+                        </div>
+                        <p class="text-sm text-center text-gray-800 font-semibold mb-1">Batons Matte</p>
+                        <p class="text-xs text-center text-gray-600">Longa duração</p>
+                        <p class="text-xs text-center text-green-600 font-semibold">Alta margem</p>
+                    </div>
+                    
+                    <div class="bg-white p-4 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300">
+                        <div class="w-full h-32 rounded-lg mb-3 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=400&h=300&fit=crop&crop=center" 
+                                 alt="Paleta de sombras coloridas" 
+                                 class="w-full h-full object-cover"
+                                 onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none';">
+                        </div>
+                        <p class="text-sm text-center text-gray-800 font-semibold mb-1">Paletas de Sombra</p>
+                        <p class="text-xs text-center text-gray-600">18 cores vibrantes</p>
+                        <p class="text-xs text-center text-green-600 font-semibold">Mais vendida</p>
+                    </div>
+                    
+                    <div class="bg-white p-4 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300">
+                        <div class="w-full h-32 rounded-lg mb-3 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=300&fit=crop&crop=center" 
+                                 alt="Base líquida e produtos para pele" 
+                                 class="w-full h-full object-cover"
+                                 onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none';">
+                        </div>
+                        <p class="text-sm text-center text-gray-800 font-semibold mb-1">Base Líquida</p>
+                        <p class="text-xs text-center text-gray-600">Cobertura total</p>
+                        <p class="text-xs text-center text-green-600 font-semibold">Qualidade premium</p>
+                    </div>
+                    
+                    <div class="bg-white p-4 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300">
+                        <div class="w-full h-32 rounded-lg mb-3 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=400&h=300&fit=crop&crop=center" 
+                                 alt="Kit completo de maquiagem" 
+                                 class="w-full h-full object-cover"
+                                 onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none';">
+                        </div>
+                        <p class="text-sm text-center text-gray-800 font-semibold mb-1">Kits Completos</p>
+                        <p class="text-xs text-center text-gray-600">Tudo em um só</p>
+                        <p class="text-xs text-center text-green-600 font-semibold">Melhor custo-benefício</p>
+                    </div>
+                </div>
+                <p class="text-center text-gray-600 mt-6 text-base">
+                    <strong>✨ Produtos com maior demanda no mercado</strong><br>
+                    <span class="text-sm">Fornecedores verificados • Qualidade garantida • Estoque disponível</span>
+                </p>
+            </div>
             
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                Descubra os <span class="text-yellow-300">Fornecedores Secretos</span> que Fazem Revendedoras Lucrarem até <span class="text-yellow-300">300%</span> por Mês!
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                Lista <span class="gradient-text">EXCLUSIVA</span> dos Maiores<br>
+                Fornecedores de Maquiagem do Brasil
             </h1>
             
-            <p class="text-xl md:text-2xl mb-8 opacity-90">
-                A lista VIP com +50 fornecedores confiáveis de maquiagem que vai transformar você na próxima empreendedora de sucesso - mesmo começando do zero!
-            </p>
-            
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-    <a href="https://pay.kiwify.com.br/p4dBVYD" target="_blank" rel="noopener noreferrer">
-        <button class="pulse-glow bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg text-xl font-bold hover:bg-yellow-300 transition-all transform hover:scale-105">
-            🚀 QUERO MINHA LISTA AGORA!
-        </button>
-    </a>
-    <div class="text-sm opacity-80">
-        ⚡ Acesso imediato após o pagamento
-    </div>
-</div>
-
-            
-            <div class="flex justify-center items-center space-x-8 text-sm opacity-80">
-                <div class="flex items-center">
-                    <span class="text-green-400 mr-2">✓</span>
-                    Garantia 7 dias
-                </div>
-                <div class="flex items-center">
-                    <span class="text-green-400 mr-2">✓</span>
-                    Começe já
-                </div>
-                <div class="flex items-center">
-                    <span class="text-green-400 mr-2">✓</span>
-                    Pagamento seguro
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Problema/Dor -->
-    <section class="py-16 bg-white">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                    Você Está Cansada de...
+            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 mb-8 text-left max-w-3xl mx-auto">
+                <h2 class="text-xl font-semibold text-gray-800 mb-3">
+                    🎯 Acesso Limitado - Edição 2025
                 </h2>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-red-50 p-6 rounded-lg border-l-4 border-red-500">
-                    <h3 class="font-bold text-red-700 mb-3">❌ Fornecedores Caros e Pouco Confiáveis?</h3>
-                    <p class="text-gray-700">Perder dinheiro com fornecedores que cobram caro, entregam produtos de baixa qualidade ou simplesmente somem com seu dinheiro?</p>
-                </div>
-                
-                <div class="bg-red-50 p-6 rounded-lg border-l-4 border-red-500">
-                    <h3 class="font-bold text-red-700 mb-3">❌ Margem de Lucro Baixa Demais?</h3>
-                    <p class="text-gray-700">Trabalhar muito e ganhar pouco porque não consegue encontrar fornecedores com preços realmente competitivos?</p>
-                </div>
-                
-                <div class="bg-red-50 p-6 rounded-lg border-l-4 border-red-500">
-                    <h3 class="font-bold text-red-700 mb-3">❌ Perder Tempo Procurando Fornecedores?</h3>
-                    <p class="text-gray-700">Gastar horas e horas pesquisando na internet sem encontrar fornecedores confiáveis e com bons preços?</p>
-                </div>
-                
-                <div class="bg-red-50 p-6 rounded-lg border-l-4 border-red-500">
-                    <h3 class="font-bold text-red-700 mb-3">❌ Medo de Começar Sem Orientação?</h3>
-                    <p class="text-gray-700">Ter o sonho de empreender mas não saber por onde começar ou ter medo de ser enganada?</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Solução -->
-    <section class="py-16 bg-gradient-to-r from-pink-100 to-yellow-100">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-                Agora Você Pode Ter Acesso aos <span class="text-pink-600">Mesmos Fornecedores</span> que as Grandes Revendedoras Usam!
-            </h2>
-            
-            <div class="bg-white p-8 rounded-xl shadow-lg">
-                <h3 class="text-2xl font-bold text-gray-900 mb-6">🎯 Lista VIP de Fornecedores Premium</h3>
-                
-                <div class="grid md:grid-cols-2 gap-6 text-left">
-                    <div class="flex items-start space-x-3">
-                        <div class="benefit-icon w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
-                        <div>
-                            <h4 class="font-bold text-gray-900">+100 Fornecedores Verificados</h4>
-                            <p class="text-gray-600 text-sm">Todos testados e aprovados por revendedoras de sucesso</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start space-x-3">
-                        <div class="benefit-icon w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
-                        <div>
-                            <h4 class="font-bold text-gray-900">Preços de Atacado Real</h4>
-                            <p class="text-gray-600 text-sm">Margem de lucro de 200% a 300% garantida</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start space-x-3">
-                        <div class="benefit-icon w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
-                        <div>
-                            <h4 class="font-bold text-gray-900">Produtos com preço baixo</h4>
-                            <p class="text-gray-600 text-sm">Vendas com lucro alto, com pouco investimento inicial</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start space-x-3">
-                        <div class="benefit-icon w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm">4</div>
-                        <div>
-                            <h4 class="font-bold text-gray-900">Entrega Rápida Nacional</h4>
-                            <p class="text-gray-600 text-sm">Fornecedores com estoque no Brasil</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start space-x-3">
-                        <div class="benefit-icon w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm">5</div>
-                        <div>
-                            <h4 class="font-bold text-gray-900">Produtos Importados Premium</h4>
-                            <p class="text-gray-600 text-sm">Maquiagens de alta qualidade que suas clientes vão amar</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start space-x-3">
-                        <div class="benefit-icon w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm">6</div>
-                        <div>
-                            <h4 class="font-bold text-gray-900">Facilidade</h4>
-                            <p class="text-gray-600 text-sm">Você terá uma lista completa</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Depoimentos -->
-    <section class="py-16 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    Veja o que Nossas Clientes Estão Dizendo
-                </h2>
-                <p class="text-xl text-gray-600">Mais de 2.847 empreendedoras já transformaram suas vidas!</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="testimonial-card p-6 rounded-lg shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold">M</div>
-                        <div class="ml-3">
-                            <h4 class="font-bold text-gray-900">Mariana Silva</h4>
-                            <p class="text-sm text-gray-600">São Paulo, SP</p>
-                        </div>
-                    </div>
-                    <div class="text-yellow-400 mb-3">⭐⭐⭐⭐⭐</div>
-                    <p class="text-gray-700 italic">"Em 3 meses saí do zero e já estou faturando R$ 8.500 por mês! Os fornecedores são incríveis, produtos de qualidade e preços que me permitem ter uma margem excelente. Recomendo demais!"</p>
-                </div>
-                
-                <div class="testimonial-card p-6 rounded-lg shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold">C</div>
-                        <div class="ml-3">
-                            <h4 class="font-bold text-gray-900">Carla Mendes</h4>
-                            <p class="text-sm text-gray-600">Rio de Janeiro, RJ</p>
-                        </div>
-                    </div>
-                    <div class="text-yellow-400 mb-3">⭐⭐⭐⭐⭐</div>
-                    <p class="text-gray-700 italic">"Estava desempregada e desesperada. Com essa lista consegui começar meu negócio do zero. Hoje tenho minha independência financeira e trabalho de casa. Melhor investimento da minha vida!"</p>
-                </div>
-                
-                <div class="testimonial-card p-6 rounded-lg shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">A</div>
-                        <div class="ml-3">
-                            <h4 class="font-bold text-gray-900">Ana Costa</h4>
-                            <p class="text-sm text-gray-600">Belo Horizonte, MG</p>
-                        </div>
-                    </div>
-                    <div class="text-yellow-400 mb-3">⭐⭐⭐⭐⭐</div>
-                    <p class="text-gray-700 italic">"Já tinha tentado revender antes mas sempre quebrava a cara com fornecedores ruins. Com essa lista encontrei fornecedores sérios e confiáveis. Meu faturamento triplicou!"</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Oferta Irresistível -->
-    <section class="py-16 bg-gradient-to-r from-red-600 to-pink-600 text-white">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <div class="mb-8">
-                <span class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full text-sm font-bold">🔥 OFERTA ESPECIAL - APENAS HOJE!</span>
-            </div>
-            
-            <h2 class="text-3xl md:text-5xl font-bold mb-6">
-                De R$ 129,90 por Apenas
-            </h2>
-            
-            <div class="text-6xl md:text-8xl font-bold text-yellow-300 mb-4">
-                R$ 19,90
-            </div>
-            
-            <p class="text-xl mb-8 opacity-90">
-                Ou 4x de apenas R$ 5,42 no cartão
-            </p>
-            
-            <div class="bg-white bg-opacity-20 p-6 rounded-lg mb-8">
-                <h3 class="text-2xl font-bold mb-4">🎁 BÔNUS EXCLUSIVOS (Valor: R$ 19,90)</h3>
-                <div class="grid md:grid-cols-2 gap-4 text-left">
-                    <div class="flex items-center">
-                        <span class="text-yellow-300 mr-2">✓</span>
-                        Lista com mais de 100 fornecedores
-                    </div>
-                    <div class="flex items-center">
-                        <span class="text-yellow-300 mr-2">✓</span>
-                        Informações detalhada de cada fornecedor
-                    </div>
-                    <div class="flex items-center">
-                        <span class="text-yellow-300 mr-2">✓</span>
-                        Ajuda para vendas
-                    </div>
-                    <div class="flex items-center">
-                        <span class="text-yellow-300 mr-2">✓</span>
-                        Liberdade financeira
-                    </div>
-                </div>
-            </div>
-            
-            <a href="https://pay.kiwify.com.br/p4dBVYD" target="_blank" rel="noopener noreferrer">
-    <button class="pulse-glow bg-yellow-400 text-gray-900 px-12 py-6 rounded-lg text-2xl font-bold hover:bg-yellow-300 transition-all transform hover:scale-105 mb-6">
-        🚀 QUERO GARANTIR MINHA VAGA AGORA!
-    </button>
-</a>
-
-            
-            <div class="text-sm opacity-80">
-                ⚡ Últimas 23 vagas disponíveis - Acesso liberado em 2 minutos
-            </div>
-        </div>
-    </section>
-
-    <!-- Escassez e Urgência -->
-    <section class="py-12 bg-gray-900 text-white">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
-                <div class="flex items-center">
-                    <div class="w-4 h-4 bg-red-500 rounded-full animate-pulse mr-3"></div>
-                    <span class="font-semibold">⏰ Oferta expira em: <span id="offer-countdown" class="text-red-400"></span></span>
-                </div>
-                <div class="flex items-center">
-                    <div class="w-4 h-4 bg-yellow-500 rounded-full animate-pulse mr-3"></div>
-                    <span class="font-semibold">👥 Restam apenas <span class="text-yellow-400">23 vagas</span></span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Garantia -->
-    <section class="py-16 bg-green-50">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <div class="bg-white p-8 rounded-xl shadow-lg border-4 border-green-500">
-                <div class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <span class="text-3xl">🛡️</span>
-                </div>
-                
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">
-                    Garantia Blindada de 7 Dias
-                </h2>
-                
-                <p class="text-xl text-gray-700 mb-6">
-                    Se em 7 dias você não conseguir encontrar pelo menos 5 fornecedores confiáveis na nossa lista, ou se não ficar 100% satisfeita por qualquer motivo, devolvemos todo seu dinheiro. Sem perguntas, sem burocracia!
+                <p class="text-gray-700 leading-relaxed">
+                    <strong>fornecedores mais confiáveis</strong> do mercado brasileiro, 
+                    incluindo preços de atacado, condições especiais de pagamento e contatos diretos para 
+                    <strong>maximizar sua margem de lucro</strong> no mercado de beleza.
                 </p>
-                
-                <div class="text-green-600 font-bold text-lg">
-                    ✅ Risco ZERO para você!
+            </div>
+
+            <div class="flex justify-center items-center space-x-8 text-sm text-gray-600">
+                <div class="flex items-center space-x-2">
+                    <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Fornecedores Verificados</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Preços de Atacado</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Acesso Imediato</span>
                 </div>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- FAQ -->
-    <section class="py-16 bg-white">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Perguntas Frequentes</h2>
-            
-            <div class="space-y-6">
-                <div class="bg-gray-50 p-6 rounded-lg">
-                    <h3 class="font-bold text-gray-900 mb-2">❓ Como recebo a lista após o pagamento?</h3>
-                    <p class="text-gray-700">Imediatamente após a confirmação do pagamento, você receberá um e-mail com o link para download da lista completa e todos os bônus.</p>
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 py-8">
+        <!-- Problem/Solution Section -->
+        <section class="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-12">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Você está perdendo <span class="text-red-600">MILHARES</span> por não ter os fornecedores certos?
+                    </h3>
+                    <p class="text-xl text-gray-600 leading-relaxed">
+                        A diferença entre <strong>lucrar R$ 500</strong> ou <strong>R$ 5.000</strong> por mês está nos fornecedores que você escolhe.
+                    </p>
                 </div>
-                
-                <div class="bg-gray-50 p-6 rounded-lg">
-                    <h3 class="font-bold text-gray-900 mb-2">❓ Os fornecedores são realmente confiáveis?</h3>
-                    <p class="text-gray-700">Sim! Todos os fornecedores foram testados e aprovados por nossa equipe e por centenas de revendedoras. Temos mais de 2 anos de relacionamento com cada um deles.</p>
-                </div>
-                
-                <div class="bg-gray-50 p-6 rounded-lg">
-                    <h3 class="font-bold text-gray-900 mb-2">❓ Preciso de muito dinheiro para começar?</h3>
-                    <p class="text-gray-700">Não! Muitos fornecedores trabalham com dropshipping, ou seja, você pode começar sem estoque. O investimento inicial pode ser de apenas R$ 100.</p>
-                </div>
-                
-                <div class="bg-gray-50 p-6 rounded-lg">
-                    <h3 class="font-bold text-gray-900 mb-2">❓ E se eu não souber como começar?</h3>
-                    <p class="text-gray-700">Com nossa lista você terá confiança para iniciar.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- CTA Final -->
-    <section class="py-16 gradient-bg text-white">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">
-                Não Deixe Essa Oportunidade Passar!
-            </h2>
-            
-            <p class="text-xl mb-8 opacity-90">
-                Milhares de mulheres já mudaram de vida com nossa lista. Agora é a SUA vez de conquistar a independência financeira que você merece!
-            </p>
-            
-            <a href="https://pay.kiwify.com.br/p4dBVYD" target="_blank" rel="noopener noreferrer">
-    <button class="pulse-glow bg-yellow-400 text-gray-900 px-12 py-6 rounded-lg text-2xl font-bold hover:bg-yellow-300 transition-all transform hover:scale-105 mb-6">
-        🚀 SIM, EU QUERO MUDAR MINHA VIDA AGORA!
-    </button>
-</a>
+                <div class="grid md:grid-cols-2 gap-12 mb-12">
+                    <div class="bg-red-50 border-l-4 border-red-400 p-6 rounded-r-lg">
+                        <h4 class="text-xl font-bold text-red-800 mb-4">❌ SEM nossa lista você:</h4>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start space-x-3">
+                                <span class="text-red-500 font-bold">•</span>
+                                <span>Perde semanas procurando fornecedores confiáveis</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-red-500 font-bold">•</span>
+                                <span>Paga preços inflacionados (até 300% mais caro)</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-red-500 font-bold">•</span>
+                                <span>Corre risco de ser enganado por fornecedores duvidosos</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-red-500 font-bold">•</span>
+                                <span>Tem margem de lucro baixíssima</span>
+                            </li>
+                        </ul>
+                    </div>
 
-            
-            <div class="text-sm opacity-80">
-                🔒 Pagamento 100% seguro | ⚡ Acesso imediato | 🛡️ Garantia de 7 dias
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <div class="mb-6">
-                <h3 class="text-xl font-bold mb-2">Segurança</h3>
-                <div class="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-8 text-sm">
-                    <div class="flex items-center">
-                        <span class="text-green-400 mr-2">🔒</span>
-                        Pagamento Seguro SSL
+                    <div class="bg-green-50 border-l-4 border-green-400 p-6 rounded-r-lg">
+                        <h4 class="text-xl font-bold text-green-800 mb-4">✅ COM nossa lista você:</h4>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-500 font-bold">•</span>
+                                <span>Economiza meses de pesquisa (tudo pronto em 5 minutos)</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-500 font-bold">•</span>
+                                <span>Acessa preços de atacado (margem de lucro alta)</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-500 font-bold">•</span>
+                                <span>Trabalha apenas com fornecedores 100% verificados</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-500 font-bold">•</span>
+                                <span>Maximiza seus lucros desde o primeiro pedido</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
+
+
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="bg-gray-50 rounded-2xl p-8 md:p-12 mb-12">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Veja os resultados de quem já tem acesso
+                    </h3>
+                    <p class="text-xl text-gray-600">Mais de 2.847 empreendedores já transformaram seus negócios</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="testimonial-card bg-white p-6 rounded-xl shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-pink-600 font-bold">MC</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Maria Clara</h4>
+                                <p class="text-sm text-gray-600">São Paulo, SP</p>
+                            </div>
+                        </div>
+                        <div class="text-yellow-400 mb-3">⭐⭐⭐⭐⭐</div>
+                        <p class="text-gray-700 italic mb-4">
+                            "Em 2 meses saí do zero para R$ 8.500 de faturamento mensal. Os fornecedores são realmente confiáveis e os preços incríveis!"
+                        </p>
+                        <div class="text-sm text-green-600 font-semibold">
+                            Resultado: R$ 8.500/mês em 60 dias
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card bg-white p-6 rounded-xl shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-blue-600 font-bold">RS</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Rafael Santos</h4>
+                                <p class="text-sm text-gray-600">Rio de Janeiro, RJ</p>
+                            </div>
+                        </div>
+                        <div class="text-yellow-400 mb-3">⭐⭐⭐⭐⭐</div>
+                        <p class="text-gray-700 italic mb-4">
+                            "Economizei mais de R$ 3.000 só no primeiro pedido! A margem de lucro que consegui foi surreal. Recomendo demais!"
+                        </p>
+                        <div class="text-sm text-green-600 font-semibold">
+                            Economia: R$ 3.000 no 1º pedido
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card bg-white p-6 rounded-xl shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-purple-600 font-bold">AL</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Ana Luiza</h4>
+                                <p class="text-sm text-gray-600">Belo Horizonte, MG</p>
+                            </div>
+                        </div>
+                        <div class="text-yellow-400 mb-3">⭐⭐⭐⭐⭐</div>
+                        <p class="text-gray-700 italic mb-4">
+                            "Estava perdida sem saber por onde começar. Com a lista, em 1 semana já tinha meu primeiro estoque e primeiras vendas!"
+                        </p>
+                        <div class="text-sm text-green-600 font-semibold">
+                            Primeira venda em 7 dias
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- Price and CTA Section -->
+        <section class="bg-white rounded-2xl shadow-2xl p-8 md:p-12 text-center border-4 border-yellow-400">
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-red-600 text-white py-2 px-6 rounded-full inline-block mb-6">
+                    <span class="font-bold">🚨 ÚLTIMAS HORAS - PREÇO PROMOCIONAL</span>
+                </div>
+                
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+                    Investimento que se paga em <span class="text-green-600">1 único pedido</span>
+                </h3>
+
+                <div class="bg-gray-50 rounded-2xl p-8 mb-8">
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <div class="text-center">
+                            <h4 class="text-xl font-bold text-gray-800 mb-4">💸 Valor Normal</h4>
+                            <div class="text-4xl font-bold text-gray-400 line-through mb-2">R$ 199,90</div>
+                            <p class="text-sm text-gray-600">Preço que você pagaria.</p>
+                        </div>
+                        <div class="text-center">
+                            <h4 class="text-xl font-bold text-green-800 mb-4">🎯 Hoje Apenas</h4>
+                            <div class="text-6xl font-bold text-green-600 mb-2">R$ 19,90</div>
+                            <p class="text-sm text-green-600 font-semibold">96% de desconto - Por tempo limitado</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="pulse-animation mb-8">
+                    <a href="https://pay.kiwify.com.br/p4dBVYD" 
+                       class="inline-block bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold text-2xl px-16 py-6 rounded-full shadow-2xl transform transition-all duration-300 hover:scale-105 border-4 border-green-300">
+                        🚀 GARANTIR ACESSO AGORA - R$ 19,90
+                    </a>
+                </div>
+
+                <!-- Guarantee Seal -->
+                <div class="mb-8">
+                    <div class="bg-gradient-to-r from-green-50 to-blue-50 border-2 border-green-300 rounded-2xl p-6 max-w-md mx-auto">
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg">
+                                <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                                    <path d="M10 17l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" fill="white"/>
+                                </svg>
+                            </div>
+                            <h4 class="text-lg font-bold text-green-800 mb-2">🛡️ GARANTIA TOTAL</h4>
+                            <p class="text-green-700 font-semibold mb-2">7 DIAS PARA TESTAR</p>
+                            <p class="text-sm text-gray-600">
+                                Se não ficar 100% satisfeito, devolvemos seu dinheiro sem perguntas!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-4 text-sm text-gray-600 mb-8">
+                    <div class="flex items-center justify-center space-x-2">
+                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>Pagamento 100% Seguro</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-2">
+                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                        <span>Acesso em 2 Minutos</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-2">
+                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        </svg>
+                        <span>Garantia de 7 Dias</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-2">
+                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <span>Suporte Especializado</span>
+                    </div>
+                </div>
+
+                <div class="bg-red-50 border border-red-200 rounded-lg p-6">
+                    <h4 class="text-lg font-bold text-red-800 mb-2">
+                        ⚠️ ATENÇÃO: Oferta por tempo limitado
+                    </h4>
+                    <p class="text-red-700">
+                        Após <span class="font-bold countdown" id="countdown-bottom">23:59:42</span> o preço volta para R$ 199,90. 
+                        <strong>Não perca esta oportunidade única!</strong>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer with Urgency -->
+    <footer class="bg-gradient-to-r from-gray-800 to-gray-900 text-white text-center py-12 mt-12">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-red-600 text-white py-3 px-8 rounded-full inline-block mb-6">
+                <div class="text-xl md:text-2xl font-bold animate-pulse">
+                    🔥 ÚLTIMAS <span id="spots-remaining">47</span> VAGAS DISPONÍVEIS
+                </div>
             </div>
             
-            <div class="border-t border-gray-800 pt-6 text-sm text-gray-400">
-                <p>&copy; 2024 Lista VIP Fornecedores. Todos os direitos reservados.</p>
-                <p class="mt-2">Este produto é comercializado com apoio da Kiwify. A plataforma não faz controle editorial prévio dos produtos comercializados, tão menos avalia a tecnicidade e experiência daqueles que os produzem.</p>
+            <h4 class="text-2xl md:text-3xl font-bold mb-4">
+                Não deixe para amanhã o que pode transformar sua vida hoje!
+            </h4>
+            
+            <p class="text-lg md:text-xl mb-6 text-gray-300">
+                Mais de <strong>2.847 empreendedores</strong> já garantiram acesso e estão faturando alto.<br>
+                <strong>Seja o próximo!</strong>
+            </p>
+
+            <div class="pulse-animation mb-8">
+                <a href="https://pay.kiwify.com.br/p4dBVYD" 
+                   class="inline-block bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold text-xl px-12 py-4 rounded-full shadow-2xl transform transition-all duration-300 hover:scale-105">
+                    💳 GARANTIR MINHA VAGA AGORA
+                </a>
+            </div>
+            
+            <div class="text-sm text-gray-400 border-t border-gray-700 pt-6">
+                <p>© 2025 Lista Exclusiva Fornecedores. Todos os direitos reservados.</p>
+                <p class="mt-2">Este produto é comercializado com apoio da Kiwify. Pagamento 100% seguro.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Purchase Notifications -->
+    <div id="purchase-notifications" class="fixed top-20 left-4 z-50 space-y-2"></div>
+
     <script>
-        // Countdown Timer
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const endTime = now + (2 * 60 * 60 * 1000); // 2 horas a partir de agora
-            
-            const timer = setInterval(function() {
-                const currentTime = new Date().getTime();
-                const timeLeft = endTime - currentTime;
+        document.addEventListener('DOMContentLoaded', function() {
+            // Purchase notifications system
+            const notifications = [
+                { name: "Maria Silva", city: "São Paulo, SP", time: "2 minutos atrás" },
+                { name: "João Santos", city: "Rio de Janeiro, RJ", time: "5 minutos atrás" },
+                { name: "Ana Costa", city: "Belo Horizonte, MG", time: "8 minutos atrás" },
+                { name: "Carlos Lima", city: "Salvador, BA", time: "12 minutos atrás" },
+                { name: "Fernanda Oliveira", city: "Brasília, DF", time: "15 minutos atrás" },
+                { name: "Roberto Alves", city: "Curitiba, PR", time: "18 minutos atrás" },
+                { name: "Juliana Pereira", city: "Fortaleza, CE", time: "22 minutos atrás" },
+                { name: "Pedro Rodrigues", city: "Porto Alegre, RS", time: "25 minutos atrás" },
+                { name: "Camila Ferreira", city: "Recife, PE", time: "28 minutos atrás" },
+                { name: "Lucas Martins", city: "Goiânia, GO", time: "32 minutos atrás" }
+            ];
+
+            function showPurchaseNotification() {
+                const notification = notifications[Math.floor(Math.random() * notifications.length)];
+                const notificationEl = document.createElement('div');
+                notificationEl.className = 'bg-white border-l-4 border-green-500 rounded-lg shadow-lg p-4 max-w-sm transform translate-x-[-100%] transition-all duration-500 ease-out';
                 
-                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-                
-                const countdownElement = document.getElementById('countdown-timer');
-                const offerCountdownElement = document.getElementById('offer-countdown');
-                
-                const timeString = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-                
-                if (countdownElement) countdownElement.innerHTML = timeString;
-                if (offerCountdownElement) offerCountdownElement.innerHTML = timeString;
-                
-                if (timeLeft < 0) {
-                    clearInterval(timer);
-                    if (countdownElement) countdownElement.innerHTML = "OFERTA EXPIRADA";
-                    if (offerCountdownElement) offerCountdownElement.innerHTML = "EXPIRADA";
-                }
-            }, 1000);
-        }
-        
-        updateCountdown();
-        
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-        // Button click handlers
-        document.querySelectorAll('button').forEach(button => {
-            button.addEventListener('click', function() {
-                if (this.textContent.includes('QUERO') || this.textContent.includes('SIM')) {
-                    // Simular redirecionamento para checkout
-                    this.classList.add('shake');
+                notificationEl.innerHTML = `
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                            <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-sm font-semibold text-gray-900">${notification.name}</p>
+                            <p class="text-xs text-gray-600">${notification.city}</p>
+                            <p class="text-xs text-green-600 font-medium">Acabou de garantir acesso!</p>
+                        </div>
+                        <div class="text-xs text-gray-500">${notification.time}</div>
+                    </div>
+                `;
+
+                const container = document.getElementById('purchase-notifications');
+                container.appendChild(notificationEl);
+
+                // Animate in
+                setTimeout(() => {
+                    notificationEl.style.transform = 'translateX(0)';
+                }, 100);
+
+                // Animate out and remove
+                setTimeout(() => {
+                    notificationEl.style.transform = 'translateX(-100%)';
                     setTimeout(() => {
-                        alert('🎉 Redirecionando para o checkout seguro...\n\n');
-                        this.classList.remove('shake');
+                        if (notificationEl.parentNode) {
+                            notificationEl.parentNode.removeChild(notificationEl);
+                        }
                     }, 500);
+                }, 4000);
+            }
+
+            // Show first notification after 3 seconds
+            setTimeout(showPurchaseNotification, 3000);
+            
+            // Then show notifications every 8-15 seconds
+            setInterval(() => {
+                if (Math.random() < 0.7) { // 70% chance
+                    showPurchaseNotification();
                 }
-            });
-        });
-        
-        // Scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+            }, Math.random() * 7000 + 8000); // Between 8-15 seconds
+            // Countdown timer functionality
+            function updateCountdown() {
+                const countdownElements = document.querySelectorAll('#countdown, #countdown-bottom');
+                const now = new Date().getTime();
+                const endTime = now + (24 * 60 * 60 * 1000); // 24 hours from now
+                
+                function tick() {
+                    const currentTime = new Date().getTime();
+                    const timeLeft = endTime - currentTime;
+                    
+                    if (timeLeft > 0) {
+                        const hours = Math.floor(timeLeft / (1000 * 60 * 60));
+                        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                        
+                        const timeString = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                        
+                        countdownElements.forEach(el => {
+                            if (el) el.textContent = timeString;
+                        });
+                    } else {
+                        countdownElements.forEach(el => {
+                            if (el) el.textContent = '00:00:00';
+                        });
+                    }
                 }
+                
+                tick();
+                setInterval(tick, 1000);
+            }
+            
+            updateCountdown();
+            
+            // Spots remaining animation
+            function updateSpotsRemaining() {
+                const spotsElement = document.getElementById('spots-remaining');
+                if (spotsElement) {
+                    let currentSpots = 47;
+                    setInterval(() => {
+                        if (Math.random() < 0.1 && currentSpots > 15) { // 10% chance every interval
+                            currentSpots--;
+                            spotsElement.textContent = currentSpots;
+                            
+                            // Flash effect
+                            spotsElement.style.color = '#fbbf24';
+                            setTimeout(() => {
+                                spotsElement.style.color = 'white';
+                            }, 500);
+                        }
+                    }, 30000); // Check every 30 seconds
+                }
+            }
+            
+            updateSpotsRemaining();
+            
+            // Enhanced CTA button interactions
+            const ctaButtons = document.querySelectorAll('a[href*="kiwify"]');
+            ctaButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    // Add click animation
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 150);
+                });
+                
+                // Add hover sound effect simulation
+                button.addEventListener('mouseenter', function() {
+                    this.style.boxShadow = '0 20px 40px rgba(34, 197, 94, 0.4)';
+                });
+                
+                button.addEventListener('mouseleave', function() {
+                    this.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.2)';
+                });
             });
-        }, observerOptions);
-        
-        // Observe elements for animation
-        document.querySelectorAll('section').forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(30px)';
-            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(section);
+            
+            // Scroll-triggered animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Apply animations to sections
+            document.querySelectorAll('section').forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                section.style.transition = 'all 0.8s ease-out';
+                observer.observe(section);
+            });
+            
+            // Add testimonial hover effects
+            document.querySelectorAll('.testimonial-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                    this.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.1)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.1)';
+                });
+            });
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9695f23196e927f1',t:'MTc1NDIyNTQ4Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'969fd232306b27e3',t:'MTc1NDMyOTAyOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
